@@ -1,0 +1,38 @@
+ALTER PROCEDURE "DBA"."inventario_web_nombre_fiscal_utf"()
+begin
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'ñ','n') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'®','') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'´','') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'½','1/2') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'’','') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'”','"') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'ó','o') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'í','i') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'é','e') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'á','a') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'ú','u') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'b','b') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'c','c') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'d','d') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'f','f') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'g','g') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'h','h') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'j','j') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'k','k') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'l','l') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'m','m') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'p','p') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'q','q') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'r','r') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'s','s') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'t','t') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'v','v') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'w','w') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'x','x') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'y','y') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'°','') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'z','z') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'¼s','1/4s') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,' -',' -') where empresa = 2;
+  update productos_inve set nombre_fiscal = REPLACE(nombre_fiscal,'¨','"') where empresa = 2
+end

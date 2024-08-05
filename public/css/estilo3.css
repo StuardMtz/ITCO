@@ -1,0 +1,126 @@
+body{
+    font-family: sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(0deg, rgba(227,227,227,0.3169642857142857) 20%, rgba(230,230,230,0.1825105042016807) 53%);
+}
+h6{
+    text-align: center;
+    color: black;
+}
+
+tr:hover{
+    outline: 1px dashed #949b2ba8;
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(214,65,12,0.258140756302521) 20%, rgba(255,179,0,0.3449754901960784) 53%);
+}
+
+th{
+    background-color: #000200;
+    color: #f3f8fa;
+}
+
+td{
+    color: black;
+}
+
+#active{
+    color: white;
+    font-size: 16px;
+    font-size-adjust: auto;
+    font-weight: 700;
+    background-color: black;
+}
+
+#producto{
+    background-color: white;
+    border: none;
+}
+
+.nav-item:hover{
+    background-color: #5B040B;
+}
+
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: white;
+}
+
+hr{
+    border-color: black;
+}
+
+a{
+    color: black;
+}
+
+
+.nav-tabs{
+    border-bottom: solid 1px black;
+    color: black;
+}
+
+/*.nav-item:hover{
+    border-top: solid 1px #05405C;
+    border-right: solid 1px #05405C;
+    border-left: solid 1px #05405C;
+    font-size: 15px;
+}*/
+
+
+.card { 
+    box-shadow: 1px 2px 4px 1px rgba(78, 78, 78, 0.719), 2px 6px 20px 2px rgba(87, 85, 85, 0.486);
+    text-align: justify;
+    background-color: white;
+    font-size: 15px;
+}
+
+.card-header{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(#040e44, #0e0341, #12574b);
+    font-size: 15px;
+}
+
+.card-body{
+    color: black;
+    font-size: 15px; 
+    
+}
+
+
+b{
+    color: black;
+}
+
+.nav-link{
+    color:black;
+}
+
+.input-group-text{
+    color: white;
+    background-color: black;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: #008080;}
+    50%  {background-color: #f4ca16;}
+    100% {background-color: #9a2828;}
+  }
+  
+.modal-content {
+    position: relative;
+    background-color: #f3f8fa;
+    margin: auto;
+    padding: 0;
+    border: 1px solid rgb(36, 35, 35);
+    width: 100%;
+    font-size: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}

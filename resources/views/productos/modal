@@ -1,0 +1,66 @@
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="form">
+        {!! Form::open(array('route'=>'agp','before'=>'csrf','method'=>'post')) !!}
+            <form>
+                <div class="col my-1">
+                        <label for="nuevo_inventario">Existencia Fisica</label>
+                        <label class="sr-only" for="inlineFormInputGroupUsername">Exisencia Fisaca</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><img width="24" height="24" src="{{asset('storage/existencia.png')}}"></div>
+                            </div>
+                        <input type="text" class="form-control" id="ExistenciaFisaca" placeholder="Existencia Fisica" name="existencia_fisica">
+                        </div>
+                    </div>
+                <hr>
+                <div class="col my-1">
+                        <label for="nuevo_inventario">Descripción</label>
+                        <label class="sr-only" for="inlineFormInputGroupUsername">Descripción</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><img width="24" height="24" src="{{asset('storage/descripcion.png')}}"></div>
+                            </div>
+                        <input type="text" class="form-control" id="Descripcion" placeholder="Descripción" name="descripcion">
+                        </div>
+                    </div>
+                <hr>
+                <div class="col-auto">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck" name="autocompletar" value="1">
+                <label class="form-check-label" for="autoSizingCheck">
+                  Auocompletar
+                </label>
+              </div>
+            </div>
+                <div class="form-group" >
+                    <label>No. de Inventario</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="id">
+                        <option value="{{$id}}" name="id">{{$id}}</option>
+                    </select>
+                    <hr>
+                    <label>Código del Producto</label>
+                    <select class="form-control" id="cod" name="cod">
+                        <option></option>
+                    </select>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-dark">Agregar</button>
+                </form>
+            {!! Form::close() !!}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

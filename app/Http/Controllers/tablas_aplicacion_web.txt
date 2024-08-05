@@ -1,0 +1,305 @@
+//Tablas para aplicacion de inventarios
+
+CREATE TABLE "DBA"."inventario_web" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT,
+	"no_encabezado" BIGINT NULL,
+	"cod_producto" BIGINT NULL,
+	"existencia_fisica" BIGINT NULL,
+	"empresa" BIGINT NULL,
+	"mal_estado" BIGINT NULL,
+	"existencia_teorica" VARCHAR(192) NULL,
+	"nombre_corto" VARCHAR(192) NULL,
+	"nombre_fiscal" VARCHAR(192) NULL,
+	"categoria" VARCHAR(192) NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_aldeas_otros" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"id_municipio" INTEGER NULL,
+	"nombre" VARCHAR(60) NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_bitacora" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"id_usuario" INTEGER NOT NULL,
+	"id_sucursal" INTEGER NULL,
+	"actividad" VARCHAR(250) NOT NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_bitacora_entrega" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"id_entrega" BIGINT NOT NULL,
+	"id_estado" INTEGER NOT NULL,
+	"comentario" "text" NULL,
+	"foto" VARCHAR(192) NULL,
+	"latitud" VARCHAR(192) NOT NULL,
+	"longitud" VARCHAR(192) NOT NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	"id_sucursal" INTEGER NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_camiones" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"marca" VARCHAR(30) NOT NULL,
+	"placa" VARCHAR(10) NOT NULL,
+	"tonelaje" VARCHAR(4) NOT NULL,
+	"id_estado" INTEGER NULL,
+	"id_sucursal" INTEGER NOT NULL,
+	"tipo_camion" VARCHAR(30) NULL,
+	"espacio" INTEGER NULL,
+	"id_piloto" INTEGER NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_categorias" (
+	"empresa" NUMERIC(4,0) NOT NULL,
+	"cod_tipo_prod" VARCHAR(13) NOT NULL,
+	"nombre" VARCHAR(40) NULL,
+	"nom_corto" VARCHAR(6) NOT NULL,
+	"Margen_Sugerido" NUMERIC(8,2) NULL,
+	"TABLA_APLICABLE" VARCHAR(4) NULL
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_clientes" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"nit" VARCHAR(10) NULL,
+	"nombre" VARCHAR(70) NOT NULL,
+	"correo" VARCHAR(70) NULL,
+	"telefono" VARCHAR(12) NULL,
+	"id_departamento" INTEGER NOT NULL,
+	"id_municipio" INTEGER NOT NULL,
+	"id_otros" INTEGER NOT NULL,
+	"direccion" VARCHAR(120) NOT NULL,
+	"id_tipo" INTEGER NOT NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_departamentos" (
+	"id" INTEGER NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"codigo_postal" VARCHAR(10) NOT NULL UNIQUE,
+	"nombre" VARCHAR(60) NOT NULL,
+	"region" VARCHAR(50) NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_detalle" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT,
+	"no_encabezado" BIGINT NOT NULL,
+	"empresa" BIGINT NULL,
+	"cod_producto" VARCHAR(10) NOT NULL,
+	"cod_categoria" VARCHAR(10) NULL,
+	"existencia" VARCHAR(10) NOT NULL,
+	"existencia_fisica" VARCHAR(10) NOT NULL,
+	"descripcion" VARCHAR(192) NULL,
+	"categoria" VARCHAR(15) NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	"mal_estado" VARCHAR(3) NULL,
+	"usuario" INTEGER NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_encabezado" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT,
+	"encargado" VARCHAR(192) NOT NULL,
+	"estado" VARCHAR(192) NOT NULL,
+	"sucursal" VARCHAR(192) NOT NULL,
+	"bodega" VARCHAR(192) NOT NULL,
+	"usuario" BIGINT NOT NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	"creado" NVARCHAR(2) NULL,
+	"semana" VARCHAR(14) NULL,
+	"fecha_inicial" DATE NULL,
+	"fecha_final" DATE NULL,
+	"porcentaje" FLOAT NULL,
+	"apellidos" VARCHAR(50) NULL,
+	"no_identificacion" VARCHAR(25) NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_entregas" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"id_cliente" BIGINT NULL,
+	"comprobante" VARCHAR(50) NOT NULL,
+	"id_sucursal" INTEGER NULL,
+	"fecha_entrega" DATE NULL,
+	"hora" TIME NULL,
+	"fecha_carga" TIMESTAMP NULL,
+	"fecha_parqueo" TIMESTAMP NULL,
+	"fecha_ruta" TIMESTAMP NULL,
+	"fecha_destino" TIMESTAMP NULL,
+	"fecha_descarga" TIMESTAMP NULL,
+	"fecha_entregado" TIMESTAMP NULL,
+	"id_usuario" INTEGER NULL,
+	"id_camion" INTEGER NULL,
+	"id_estado" INTEGER NOT NULL,
+	"id_ruta" INTEGER NULL,
+	"id_departamento" INTEGER NULL,
+	"id_municipio" INTEGER NULL,
+	"id_otros" INTEGER NULL,
+	"direccion" VARCHAR(120) NULL,
+	"ubicacion_destino" VARCHAR(20) NULL,
+	"ubicacion_descarga" VARCHAR(20) NULL,
+	"comentarios" VARCHAR(120) NULL,
+	"detalle_entrega" VARCHAR(192) NULL,
+	"detalle_direccion" VARCHAR(192) NULL,
+	"id_entregar" INTEGER NULL,
+	"latitud" VARCHAR(100) NULL,
+	"longitud" VARCHAR(100) NULL,
+	"id_tipo" INTEGER NULL,
+	"fecha_asignacion" TIMESTAMP NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_estados" (
+	"id" INTEGER NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"nombre" VARCHAR(25) NOT NULL,
+	"porcentaje" VARCHAR(7) NOT NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_municipios" (
+	"id" INTEGER NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"id_departamento" INTEGER NULL,
+	"codigo_postal" VARCHAR(10) NULL,
+	"nombre" VARCHAR(60) NOT NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_productos_semana" (
+	"id" INTEGER NOT NULL DEFAULT AUTOINCREMENT,
+	"semana" VARCHAR(12) NULL,
+	"empresa" NUMERIC(4,0) NULL,
+	"cod_producto" NUMERIC(5,0) NULL,
+	"cod_tipo_prod" VARCHAR(50) NULL,
+	"nombre_fiscal" VARCHAR(150) NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	"nombre_corto" CHAR(13) NULL,
+	"existencia_teorica" VARCHAR(50) NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."inventario_web_rutas" (
+	"id" BIGINT NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"id_usuario" INTEGER NOT NULL,
+	"id_camion" INTEGER NOT NULL,
+	"id_estado" INTEGER NOT NULL,
+	"detalle" VARCHAR(120) NULL,
+	"fecha_fin" TIMESTAMP NULL,
+	"fecha_entrega" DATE NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+COMMENT ON COLUMN "DBA"."inventario_web_rutas"."fecha_fin" IS 'Fecha de finalizacion de entrega';
+COMMENT ON COLUMN "DBA"."inventario_web_rutas"."fecha_entrega" IS 'Fecha en que se debe realizar la ruta';
+
+
+CREATE TABLE "DBA"."inventario_web_semana" (
+	"id" INTEGER NOT NULL DEFAULT AUTOINCREMENT,
+	"semana" VARCHAR(15) NOT NULL,
+	"fecha_inicial" DATE NOT NULL,
+	"fecha_final" DATE NOT NULL,
+	"created_at" TIMESTAMP NOT NULL,
+	"updated_at" TIMESTAMP NOT NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."oauth_access_tokens" (
+	"id" VARCHAR(100) NOT NULL,
+	"user_id" BIGINT NULL,
+	"client_id" INTEGER NOT NULL,
+	"name" VARCHAR(255) NULL,
+	"scopes" "text" NULL,
+	"revoked" TINYINT NOT NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	"expires_at" "datetime" NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."oauth_auth_codes" (
+	"id" VARCHAR(100) NOT NULL,
+	"user_id" BIGINT NOT NULL,
+	"client_id" INTEGER NOT NULL UNIQUE,
+	"scopes" "text" NULL,
+	"revoked" TINYINT NOT NULL,
+	"expires_at" "datetime" NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."oauth_clients" (
+	"id" INTEGER NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"user_id" BIGINT NULL,
+	"name" VARCHAR(255) NOT NULL,
+	"secret" VARCHAR(100) NOT NULL,
+	"redirect" "text" NOT NULL,
+	"personal_access_client" TINYINT NOT NULL,
+	"password_client" TINYINT NOT NULL,
+	"revoked" TINYINT NOT NULL,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."oauth_personal_access_clients" (
+	"id" INTEGER NOT NULL DEFAULT AUTOINCREMENT UNIQUE,
+	"client_id" INTEGER NOT NULL UNIQUE,
+	"created_at" TIMESTAMP NULL,
+	"updated_at" TIMESTAMP NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+
+CREATE TABLE "DBA"."oauth_refresh_tokens" (
+	"id" VARCHAR(100) NOT NULL,
+	"access_token_id" VARCHAR(100) NOT NULL,
+	"revoked" TINYINT NOT NULL,
+	"expires_at" "datetime" NULL,
+	PRIMARY KEY ( "id" ASC )
+) IN "system";
+
+

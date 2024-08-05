@@ -1,0 +1,172 @@
+body{
+    font-family:'Courier New', Courier, monospace;
+    background-color:rgba(245, 245, 245, 0.788);
+}
+h1,h2,h3,h4,h5{
+    color: white;
+}
+
+.container-fluid{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.navbar-expand-lg, .nav-link, .navbar-brand{
+    border-top: none;
+    border-left:none;
+    border-right: none;
+    background-color: black;
+    color: white;
+}
+
+.nav-link:hover{
+    color: #ff0000;
+    text-decoration-line: underline;
+    text-shadow: #D8DEE4;
+}
+
+blockquote{
+    /*background-image: linear-gradient(#fff3e000, #ffe6c7c2, #ffd9b3d9); verano*/
+    background-image: linear-gradient(to top, #5c779966, #456284, #2e4e696b);
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    /*text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);*/
+    text-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.1),  /* Black shadow with 10% opacity */
+        0 2px 0 rgba(0, 0, 0, 0.2),  /* Black shadow with 20% opacity */
+        0 3px 0 rgba(0, 0, 0, 0.3),  /* Black shadow with 30% opacity */
+        0 4px 0 rgba(0, 0, 0, 0.4),  /* Black shadow with 40% opacity */
+        0 5px 0 rgba(0, 0, 0, 0.5),  /* Black shadow with 50% opacity */
+        0 6px 1px rgba(0, 0, 0, 0.6),  /* Black shadow with 60% opacity, slight blur */
+        0 0 5px rgba(0, 0, 0, 0.1),  /* Inner black shadow with 10% opacity */
+        0 1px 3px rgba(0, 0, 0, 0.3),  /* Black inner shadow with 30% opacity */
+        0 3px 5px rgba(0, 0, 0, 0.2),  /* Black inner shadow with 20% opacity */
+        0 5px 10px rgba(0, 0, 0, 0.25), /* Black inner shadow with 25% opacity */
+        0 10px 10px rgba(0, 0, 0, 0.2), /* Black inner shadow with 20% opacity */
+        0 20px 20px rgba(0, 0, 0, 0.15); /* Black inner shadow with 15% opacity */
+}
+
+tbody{
+    background-color: white;
+    text-transform: lowercase;
+
+}
+
+th{
+    color: white;
+    background-color: #000002;
+}
+
+tr:hover{
+    cursor: pointer;
+    background-image: linear-gradient( 179.7deg, rgba(255,255,255,1) 2%, rgb(197, 195, 195) 49.1%, rgba(255,255,255,1) 102.3% );
+    /*background-color: #414E8936;*/
+    color: rgb(0, 0, 0);
+    text-decoration: double;
+    text-rendering: geometricPrecision;
+    text-transform: unset;
+    text-anchor: start;
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #f3f8fa;
+    margin: auto;
+    padding: 0;
+    border: 1px solid rgb(36, 35, 35);
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.modal-header{
+    background-color: #333940;
+    color: #CCCCD9;
+}
+
+.modal-body{
+    background-color: #D8DEE4;
+    border: solid 2px #7A94A6;
+    /*border: dashed 2px #B42434;*/
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.modal-footer{
+    background-color: #D8DEE4;
+}
+
+#producto{
+    background-color: white;
+    border: none;
+}
+
+.card{
+    margin-top: 0.5rem;
+    background-color: rgba(255, 255, 255, 2); /* RGBA con un valor alfa (transparencia) de 0.5 */
+    border: 1px solid #00000000;
+    margin: 0 auto;
+}
+
+.card-header{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to top, #5c7799, #456284, #2e4d69);
+    /*background-image: linear-gradient(#ffe4b5, #fdc999, #f2b179);verano*/
+    /*background-image: linear-gradient(#961e1a, #410303e0, #571212ea);*/
+    /*background-image: linear-gradient(#3c3c6c, #3c3c6c, #3c3c6c);*/
+}
+.card-body{
+    color: white;
+    font-size: 17px;
+    background-color: #3050685a;
+}
+
+.input-group-text{
+    color: white;
+    background-color: black;
+    font-size: 15px;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: #008080;}
+    50%  {background-color: #f4ca16;}
+    100% {background-color: #9a2828;}
+  }
+
+.encabezado{
+    background-color: #c2e2f0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+b{
+    font-style:initial;
+}
+.logo{
+    margin: 5px;
+}
+
+.text-paginate{
+    color: white;
+}
+
+.precaucion-class{
+    background-color:#C9E9B8;
+}
+
+.atencion-class{
+    background-color:#F5EB98;
+}
+.urgente-class{
+    background-color:#F78181;
+}

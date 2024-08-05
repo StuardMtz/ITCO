@@ -1,0 +1,132 @@
+.container-fluid{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 2cap;
+    margin-bottom: 2cap;
+    margin-right: 2cap;
+    margin-left: 2cap;
+    background-color: white;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 2cap;
+    margin-bottom: 2cap;
+    margin-right: 2cap;
+    margin-left: 2cap;
+    background-color: white;
+}
+
+.navbar-expand-lg{
+    border-top: none;
+    border-left:none;
+    border-right: none;
+}
+
+.active{
+    border: solid 2px #ffffff; 
+    border-bottom: none;
+}
+
+.nav-link{
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: -5px;
+}
+
+h4,h5{
+    text-align: center;
+}
+
+tbody{
+    font-size:medium;
+    background-color: white;
+    text-transform: lowercase;
+}
+
+
+th{
+    color: white;
+    font-size-adjust: auto;
+    background-color: #000002;
+}
+
+tr:hover{
+    cursor: pointer;
+    /*background-image: linear-gradient( 109.6deg, rgba(183,232,221,1) 11.2%, rgba(148,194,215,1) 85.9%, rgba(0,215,151,1) 100.2% );*/
+    background-color: #414E8936;
+    color: rgb(0, 0, 0);
+    text-decoration: double;
+    text-rendering: geometricPrecision;
+    text-transform: unset;
+    text-anchor: start;
+}
+ .modal-content{
+    border-radius: 30px;
+ }
+
+.modal-header{
+    background-color: #333940;
+    color: #CCCCD9;
+}
+
+.modal-body{
+    background-color: #D8DEE4;
+    border: solid 2px #7A94A6;
+    /*border: dashed 2px #B42434;*/
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.modal-footer{
+    background-color: #D8DEE4;
+}
+
+#producto{
+    background-color: white;
+    border: none;
+}
+
+
+.card-header{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(#3c3c6c, #3c3c6c, #3c3c6c);
+    font-size:medium;
+}
+
+.card-body{
+    color: black;
+    font-size: 15px; 
+    background-color: #CCCCD9;
+}
+
+
+b{
+    color: black;
+}
+
+.input-group-text{
+    color: white;
+    background-color: black;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: #008080;}
+    50%  {background-color: #f4ca16;}
+    100% {background-color: #9a2828;}
+  }
+  
+.modal-content {
+    position: relative;
+    background-color: #f3f8fa;
+    margin: auto;
+    padding: 0;
+    border: 1px solid rgb(36, 35, 35);
+    width: 100%;
+    font-size: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}

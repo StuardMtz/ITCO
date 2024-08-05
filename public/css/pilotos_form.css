@@ -1,0 +1,68 @@
+
+form{
+    background-color: white;
+    border-right: solid 1px gray;
+	color: black;
+	font-weight: bold;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+input[type="file"] {
+	background-image: linear-gradient(to bottom, #ECF0F1 80%, #A9CCE3);
+	color:black;
+	border: none;
+	font-weight: bold;
+}
+textarea[type="text"]{
+	background-image: linear-gradient(to bottom, #ECF0F1 85%, #A9CCE3);
+	color:black;
+	border-bottom: solid 1px #A9CCE3;
+    border-top: none;
+    border-right: none;
+	font-weight: bold;
+}
+textarea:hover{
+	background-color:#EBF5FB;
+	color:black;
+	border: solid 2px #A9CCE3;
+	font-weight: 500;
+}
+.input-group-text {
+	color: rgb(255, 255, 255);
+	background-color: #5499C7;
+	border-color: #7FB3D5;
+}
+
+hr{
+  border-color: black;
+}
+h4{
+	text-align: center;
+    font-weight: 600;
+    font-family: cursive;
+     border-bottom: solid 1px #AED6F1;
+}
+h3{
+    font-family: cursive;
+    text-align: center;
+}
+#continuar{
+	color: black;
+	background-image: linear-gradient(to bottom, #ECF0F1 50%, #A9CCE3);
+	width: 90%;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+#continuar:hover{
+	color: black;
+	background-image: linear-gradient(to bottom, #AED6F1 5%, #154360);
+	width: 90%;
+    font-weight: 800;
+    font-size: 16px;
+}

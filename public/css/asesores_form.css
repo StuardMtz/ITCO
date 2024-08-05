@@ -1,0 +1,112 @@
+
+form{
+	color: black;
+	font-weight: bold;
+	background-image: linear-gradient(to bottom left, #BBCFB6, #BBCFB6);
+	border: double 7px black;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+input[type="text"]{
+    border: none;
+    background-image: linear-gradient(to bottom, white 15%, #FADBD8);
+}
+input:hover[type="text"] {
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+input[type="number"]{
+    border: none;
+    background-image: linear-gradient(to bottom, white 15%, #FADBD8);
+}
+input:hover[type="number"] {
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+select{
+    background-image: linear-gradient(to bottom, white 15%, #FADBD8);
+}
+select:hover{
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+input[type="date"]{
+    border: none;
+    background-image: linear-gradient(to bottom, white 15%, #FADBD8);
+}
+input:hover[type="date"] {
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+input:hover[type="number"] {
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+input[type="email"]{
+    border: none;
+    background-image: linear-gradient(to bottom, white 15%, #FADBD8);
+}
+input:hover[type="email"] {
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+input[type="time"]{
+    border: none;
+    background-image: linear-gradient(to bottom, white 15%, #FADBD8);
+}
+input:hover[type="time"] {
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+textarea{
+    border: none;
+    background-image: linear-gradient(to bottom, white 15%, #FADBD8);
+}
+textarea:hover{
+	background-color:#FDEDEC;
+	color:black;
+	border-bottom: solid 2px #922B21;
+	font-weight: bold;
+}
+.input-group-text {
+	color: rgb(255, 255, 255);
+	background-color: #000000;
+	border-color: #005637;
+}
+
+hr{
+  border-color: black;
+}
+h4{
+	text-align: center;
+    font-weight: 800;
+    color: white;
+}
+#boton{
+	color: rgb(255, 255, 255);
+	background-color:#B03A2E;
+	width: 50%;
+}
+
+.card-header{
+    background-color:#A93226;
+    font-weight: bold;
+    font-family: monospace;
+}
+

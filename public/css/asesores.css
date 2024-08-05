@@ -1,0 +1,29 @@
+h4{
+    text-align: center;
+    font-weight: 300;
+}
+th{
+    text-align: justify;
+    font-weight: 900;
+    background-color: #E8824F;
+    border-bottom: solid 1px black;
+    font-size: 17px;
+}
+td{
+   text-align: justify;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: solid 1px gray;
+}
+tr:hover{
+  background-color: #D3D3D3;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+a:hover{
+    color: black;
+}
+td:hover{
+    background-color: #9C9C9C;
+}
